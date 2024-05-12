@@ -14,6 +14,9 @@ To set up and run this project, ensure the following are installed:
 - **Pandas**: For data manipulation. Install via pip: `pip install pandas`
 - **NumPy**: For numerical operations. Install via pip: `pip install numpy`
 - **MongoDB**: Database for storing processed data. [Setup guide](https://www.mongodb.com/docs/manual/installation/)
+- from sklearn.model_selection import train_test_split
+- from sklearn.ensemble import RandomForestClassifier
+- from sklearn.metrics import accuracy_score
 
 ## Project Overview
 
