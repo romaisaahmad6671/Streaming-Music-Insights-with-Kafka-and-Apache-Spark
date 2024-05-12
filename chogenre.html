@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choose Genre - MeloMix</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: black; 
+            color: white; 
+            background-image: url('public/3.jpg');
+            background-size: cover; 
+            background-position: center; 
+            background-repeat: no-repeat; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box {
+            padding: 60px; /* Further increased padding */
+            background-color: rgba(51, 51, 51, 0.9); 
+            border: 3px solid hotpink; 
+            border-radius: 20px; 
+            transition: transform 0.3s ease;
+            width: 700px; /* Further increased width */
+            height: 150px;
+            max-width: 800px; /* Increased maximum width */
+            box-shadow: 0 0 10px hotpink; 
+            text-align: center; 
+            position: relative; /* Added to support relative positioning of children */
+        }
+
+        select {
+            padding: 10px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            background-color: #222;
+            color: white;
+            width: 100%; 
+            margin-bottom: 20px; 
+        }
+
+        .submit-button {
+            background-color: hotpink;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            box-shadow: 0 0 8px #ff69b4; 
+            transition: background-color 0.3s, box-shadow 0.3s;
+            width: 200px; 
+            position: absolute; /* Change to absolute to position relative to the parent box */
+            bottom: -60px; /* Adjust as needed */
+            left: 50%; /* Center horizontally */
+            transform: translateX(-50%); /* Align center */
+        }
+
+        .submit-button:hover {
+            background-color: #ff69b4; 
+            box-shadow: 0 0 12px #ff69b4; 
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h2>Choose Your Genre</h2>
+        <select id="genre">
+            <option value="Rock">Rock</option>
+            <option value="Experimental">Experimental</option>
+            <option value="Electronic">Electronic</option>
+            <option value="Hip-Hop">Hip-Hop</option>
+            <option value="Folk">Folk</option>
+            <option value="Pop">Pop</option>
+            <option value="Instrumental">Instrumental</option>
+            <option value="International">International</option>
+            <option value="Classical">Classical</option>
+            <option value="Jazz">Jazz</option>
+            <option value="Old-Time / Historic">Old-Time / Historic</option>
+            <option value="Spoken">Spoken</option>
+            <option value="Country">Country</option>
+            <option value="Soul-RnB">Soul-RnB</option>
+            <option value="Blues">Blues</option>
+            <option value="Easy Listening">Easy Listening</option>
+            <!-- Add more options here -->
+        </select>
+        <button class="submit-button" onclick="submitGenre()">Submit</button>
+    </div>
+
+    <script>
+        function submitGenre() {
+            var selectedGenre = document.getElementById("genre").value;
+            // Redirect logic here
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Audio - MeloMix</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: black;
+            color: white;
+            background-image: url('public/3.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column; /* Ensure elements are stacked vertically */
+        }
+
+        .box {
+            padding: 60px;
+            background-color: rgba(51, 51, 51, 0.9);
+            border: 3px solid hotpink;
+            border-radius: 20px;
+            transition: transform 0.3s ease;
+            width: 80%;
+            max-width: 800px;
+            box-shadow: 0 0 10px hotpink;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .file-input-wrapper {
+            margin-top: -20px; /* Adjust according to your needs */
+            margin-bottom: 10px;
+        }
+
+        input[type="file"] {
+            opacity: 0;
+            width: 100%;
+            height: 50px;
+            cursor: pointer;
+        }
+
+        .file-input-label {
+            background-color: hotpink;
+            color: white;
+            padding: 15px 30px;
+            font-size: 16px;
+            border-radius: 25px;
+            border: 2px solid hotpink;
+            cursor: pointer;
+            text-align: center;
+            display: inline-block;
+        }
+
+        .file-input-label:hover {
+            background-color: #ff69b4;
+            box-shadow: 0 0 12px #ff69b4;
+        }
+
+        .file-info {
+            color: white;
+            font-size: 14px;
+            text-align: center;
+            margin-top: 10px; /* Adjust space between label and text */
+        }
+
+        .submit-button {
+            background-color: hotpink;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            box-shadow: 0 0 8px #ff69b4;
+            transition: background-color 0.3s, box-shadow 0.3s;
+            width: 200px;
+            margin-top: 20px; /* Space between box and button */
+        }
+
+        .submit-button:hover {
+            background-color: #ff69b4;
+            box-shadow: 0 0 12px #ff69b4;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h2>Input Audio</h2>
+        <div class="file-input-wrapper">
+            <input type="file" id="audioInput" accept="audio/*">
+            <label for="audioInput" class="file-input-label">Choose File</label>
+            <div id="fileInfo" class="file-info">No file selected</div>
+        </div>
+    </div>
+    <!-- Upload button now placed below the box and centered -->
+    <button class="submit-button" onclick="submitAudio()">Upload</button>
+
+    <script>
+        document.getElementById('audioInput').addEventListener('change', function () {
+            var fileInfo = document.getElementById('fileInfo');
+            if (this.files && this.files.length > 0) {
+                fileInfo.textContent = 'Selected file: ' + this.files[0].name;
+            } else {
+                fileInfo.textContent = "No file selected";
+            }
+        });
+
+        function submitAudio() {
+            var audioFile = document.getElementById("audioInput").files[0];
+            if (audioFile) {
+                alert("File ready for upload: " + audioFile.name);
+                // Add code to submit the file to the server if needed
+            } else {
+                alert("Please select an audio file.");
+            }
+        }
+    </script>
+</body>
+</html>

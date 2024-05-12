@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predicted Genre - MeloMix</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: black;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 24px;
+        }
+
+        .genre {
+            font-weight: bold;
+            color: hotpink;
+        }
+
+        .go-back {
+            margin-top: 30px;
+        }
+
+        .go-back a {
+            color: white;
+            text-decoration: none;
+            border: 2px solid white;
+            padding: 10px 20px;
+            border-radius: 20px;
+            transition: background-color 0.3s, border-color 0.3s;
+        }
+
+        .go-back a:hover {
+            background-color: white;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Predicted Genre</h1>
+        <p>The predicted genre for the uploaded audio is: <span class="genre" id="predictedGenre">Loading...</span></p>
+        <div class="go-back">
+            <a href="/">Go Back to Home</a>
+        </div>
+    </div>
+
+    <script>
+        // Fetch predicted genre from the server
+        fetch('/predictedGenre')
+            .then(response => response.json())
+            .then(data => {
+                // Update the content of the genre span
+                document.getElementById('predictedGenre').textContent = data.genre;
+            })
+            .catch(error => console.error('Error fetching predicted genre:', error));
+    </script>
+</body>
+</html>

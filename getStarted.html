@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Started - MeloMix</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: black; /* Set background to black */
+            color: white; /* Set text color to white for better readability on dark background */
+            background-image: url('public/3.jpg');
+            background-size: cover; /* Cover the entire page */
+            background-position: center; /* Align the background to the center */
+            background-repeat: no-repeat; /* Do not repeat the background */
+        }
+
+        .navbar {
+            background-color: black;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 22px;
+            height: 44px;
+        }
+
+        .navbar-logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar-logo img {
+            height: 50px;
+        }
+
+        .navbar-logo span {
+            font-size: 24px;
+            margin-left: 10px;
+        }
+
+        .navbar-links button {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            padding: 10px 15px;
+        }
+
+        .box {
+            margin: 30px auto; /* Center the boxes horizontally */
+            padding: 20px; /* Adjust padding */
+            background-color: rgba(51, 51, 51, 0.9); /* Slightly darker grey background for boxes */
+            border: 3px solid hotpink; /* Thick neon pink border */
+            border-radius: 0px; /* Square corners */
+            transition: transform 0.3s ease;
+            width: 40%; /* Slightly wider than before */
+            box-shadow: 0 0 10px hotpink; /* Neon glow effect */
+            position: relative; /* Needed to layer on the image */
+            text-align: center; /* Center text horizontally */
+        }
+
+        .box:hover {
+            transform: scale(1.08); /* Slightly larger scale on hover */
+            box-shadow: 0 0 20px hotpink; /* Enhanced neon glow effect on hover */
+        }
+
+        .box button {
+            background-color: #222; /* Dark background for the button */
+            color: white;
+            padding: 10px 20px;
+            display: inline-block;
+            border-radius: 20px; /* Rounded edges */
+            border: 2px solid hotpink; /* Hot pink border */
+            margin-bottom: 20px; /* Space below the button */
+            width: 100%; /* Full width */
+            font-size: 24px; /* Large font size */
+            cursor: pointer; /* Pointer cursor on hover */
+            text-align: center; /* Center text */
+            outline: none; /* No outline */
+        }
+
+        .box button:hover {
+            background-color: #ff69b4; /* Lighter hotpink on hover */
+            box-shadow: 0 0 12px #ff69b4; /* Enhanced glow effect on hover */
+        }
+
+        .box ul {
+            text-align: left; /* Align list text to the left */
+            padding-left: 20px; /* Indent the list */
+        }
+
+        .content {
+            display: flex;
+            justify-content: center; /* Center content boxes horizontally */
+            align-items: center; /* Center content boxes vertically */
+            position: absolute;
+            top: 50%; /* Center vertically */
+            left: 50%; /* Center horizontally */
+            transform: translate(-50%, -50%); /* Adjust position to true center */
+            width: 80%; /* Adjust width of content area */
+        }
+
+        .recommended-button {
+            display: block;
+            background-color: hotpink;
+            color: white;
+            text-align: center;
+            padding: 15px 30px;
+            margin: 20px auto; /* Center button horizontally */
+            font-size: 20px;
+            margin-top: 100px;
+            border: none;
+            border-radius: 20px; /* Rounded corners */
+            cursor: pointer;
+            box-shadow: 0 0 8px #ff69b4; /* Subtle glow effect */
+            transition: background-color 0.3s, box-shadow 0.3s;
+        }
+
+        .recommended-button:hover {
+            background-color: #ff69b4; /* Lighter hotpink on hover */
+            box-shadow: 0 0 12px #ff69b4; /* Enhanced glow effect on hover */
+        }
+
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="navbar-logo">
+            <img src="public\logo.avif" alt="MeloMix Logo">
+            <span>MeloMix</span>
+        </div>
+        <div class="navbar-links">
+            <button onclick="redirectTo()">Home</button>
+                <button>About</button>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="box">
+            <button onclick="redirectTouploadaudio()">Input Audio</button>
+            <ul>
+                <li>Upload any audio to our app</li>
+                <li>Discover tunes akin to your selection</li>
+                <li>Find melodies that resonate with your taste</li>
+                <li>Receive recommendations based on your chosen sound</li>
+                <li>Embrace musical serendipity with just a tap</li>
+            </ul>
+        </div>
+        <div class="box">
+            <button onclick="redirectTogenre()">Choose Genre</button>
+            <ul>
+                <li>Select your desired genre</li>
+                <li>Let the music transport you to new realms of auditory delight</li>
+                <li>Whether you're craving jazz, EDM, or orchestral arrangements</li>
+                <li>Our app tailors its recommendations to your musical preferences</li>
+                <li>Immerse yourself in a chosen genre and embark on a journey</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Recommended Music Button -->
+    <button class="recommended-button">Recommended Music</button>
+    <script>
+        function redirectTo() {
+            // Redirect to the signup page
+            window.location.href = '/';
+        }
+        function redirectTouploadaudio() {
+            // Redirect to the inaudio page
+            window.location.href = '/inaudio';
+        }
+        function redirectTogenre() {
+            // Redirect to the chogenre page
+            window.location.href = '/chogenre';
+        }
+        
+    </script>
+</body>
+</html>

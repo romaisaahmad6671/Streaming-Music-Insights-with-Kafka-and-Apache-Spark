@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .navbar {
+            background-color: black;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 22px;
+            height: 44px;
+        }
+
+        .navbar-logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar-logo img {
+            height: 50px;
+        }
+
+        .navbar-logo span {
+            font-size: 24px;
+            margin-left: 10px;
+        }
+
+        .navbar-links button {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            padding: 10px 15px;
+        }
+
+        .header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .header-image {
+            width: 100%;
+            height: auto; /* This change ensures that the image size adjusts according to its natural aspect ratio */
+        }
+
+        .content {
+            display: flex;
+            justify-content: center;
+        }
+
+        .footer-image {
+            width: 100%;
+            height: auto; /* Adjusts height based on image aspect ratio */
+            position: relative; /* Changed from absolute to relative */
+            display: block; /* Ensures it doesn't overlap */
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="navbar-logo">
+            <img src="/logo.avif" alt="MeloMix Logo"> <!-- Corrected path -->
+            <span>MeloMix</span>
+        </div>
+        <div class="navbar-links">
+            <button>Home</button>
+            <button>About</button>
+            <button onclick="location.href='/getStarted'">Get Started</button> <!-- Corrected path -->
+        </div>
+    </div>
+    <div class="header">
+        <img src="/1.webp" alt="Header Image" class="header-image"> <!-- Corrected path -->
+    </div>
+    <div class="content">
+        <!-- Potential future content -->
+    </div>
+    <img src="/2.png" alt="Footer Image" class="footer-image"> <!-- Corrected path -->
+    <script>
+        function redirectToSignup() {
+            // Redirect to the signup page
+            window.location.href = '/getStarted';
+        }
+    </script>
+</body>
+</html>
