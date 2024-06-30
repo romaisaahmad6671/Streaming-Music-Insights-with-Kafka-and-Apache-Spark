@@ -64,7 +64,7 @@ The dataset includes approximately 100 GB of audio files complemented by metadat
 
 ## Contributors
 
-- Sharjeel Nadir: [i212699@nu.edu.pk](mailto:i212699@nu.edu.pk)
+- Sharjeel Nadir: [Sharjeelnadir127@gmail.com](mailto:i212699@nu.edu.pk)
 - Masroor Bin Rehan: [i211707@nu.edu.pk](mailto:i211707@nu.edu.pk)
 
 ## Additional Notes
